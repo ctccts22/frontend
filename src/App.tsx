@@ -1,10 +1,10 @@
-import Router from './router/Router';
+import Index from '@/router';
 
 function App() {
 
   return (
     <>
-			<Router />
+			<Index />
     </>
   )
 }

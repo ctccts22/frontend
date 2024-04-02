@@ -1,9 +1,8 @@
 import axios from 'axios';
+import { API_BASE_URL } from '../api/apiEndPoints';
 
 const instance = axios.create({
-	baseURL: 'http://localhost:8080/api', // 개발서버
-	// baseURL: 'https:', // 운영서버
-	// timeout: 1000, -- removed
+	baseURL: API_BASE_URL,
 	withCredentials: true,
 	headers: {
 		'Content-Type': 'application/json'

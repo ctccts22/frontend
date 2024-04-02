@@ -2,7 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import MainPage from '../components/pages/MainPage.tsx';
 import Login from '../components/pages/Login.tsx';
 
-const Router = () => {
+const Index = () => {
 	return (
 		<BrowserRouter>
 			<Routes>
@@ -13,4 +13,4 @@ const Router = () => {
 	);
 }
 
-export default Router;
+export default Index;

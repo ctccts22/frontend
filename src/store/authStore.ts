@@ -1,11 +1,11 @@
 import { create } from 'zustand';
-import { AuthModel } from './model/AuthModel.tsx';
-import { Token } from './model/AuthModel.tsx';
-import { login } from './service/AuthService.tsx';
+import { Auth } from '@/types/auth.ts';
+import { Token } from '@/types/auth.ts';
+import { login } from '@/services/authService.tsx';
 interface CredentialState {
-	credential: AuthModel;
+	credential: Auth;
 	token: Token;
-	login: (credentials: AuthModel) => void;
+	login: (credentials: Auth) => void;
 }
 
 export const useAuthStore = create<CredentialState>((set) => ({
@@ -13,7 +13,7 @@ export const useAuthStore = create<CredentialState>((set) => ({
 	credential: { email: '', password: '' },
 	token: { accessToken: '' },
 	//actions
-	login: async (credentials: AuthModel) => {
+	login: async (credentials: Auth) => {
 		console.log('login:', credentials);
 		try {
 			const response = await login(credentials);
